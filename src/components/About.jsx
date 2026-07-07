@@ -12,7 +12,7 @@ export default function About() {
           <p className="text-muted leading-relaxed">{aboutMe}</p>
 
           <div className="panel p-5">
-            <p className="font-mono text-sm text-teal mb-2">// Professional Summary</p>
+            <p className="font-mono text-sm text-teal mb-2">Professional Summary</p>
             <p className="text-text leading-relaxed">{professionalSummary}</p>
           </div>
         </div>
