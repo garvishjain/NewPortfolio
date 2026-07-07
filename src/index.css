@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(45,212,191,0.10), transparent),
+      linear-gradient(to bottom, #0B1220, #0B1220);
+  }
+  ::selection {
+    @apply bg-teal/30 text-white;
+  }
+  :focus-visible {
+    outline: 2px solid #2DD4BF;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .section-wrap {
+    @apply max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28;
+  }
+  .eyebrow {
+    @apply font-mono text-teal text-sm tracking-wide;
+  }
+  .panel {
+    @apply bg-panel border border-border rounded-lg;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-teal text-bg font-semibold px-5 py-2.5 rounded-md
+      hover:bg-teal-dim transition-colors duration-200 font-mono text-sm;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-border text-text font-medium px-5 py-2.5 rounded-md
+      hover:border-teal hover:text-teal transition-colors duration-200 font-mono text-sm;
+  }
+  .chip {
+    @apply px-3 py-1.5 rounded-md bg-panel2 border border-border text-sm text-text font-mono;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
